@@ -1,8 +1,8 @@
 package entity;
 
-import java.util.List;
+import entity.abstracts.Tabela;
 
-public class Vendedor {
+public class Vendedor extends Tabela {
     private int id;
     private String nome;
 
@@ -11,7 +11,11 @@ public class Vendedor {
         this.nome = nome;
 
     }
-
+    @Override
+    public String conteudo() {
+        return "Id: " + this.id +
+                "nome: "+ this.nome;
+    }
 
     public int getId() {
         return id;
@@ -21,6 +25,7 @@ public class Vendedor {
         return nome;
     }
 
-
-
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }

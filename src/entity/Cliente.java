@@ -1,16 +1,27 @@
 package entity;
 
-public class Cliente {
+import entity.abstracts.Tabela;
+
+public class Cliente extends Tabela {
     private int id;
     private String nome;
     private String indereco;
 
+    //CONSTRUCTOR
     public Cliente(int id, String nome, String indereco) {
         this.id = id;
         this.nome = nome;
         this.indereco = indereco;
     }
 
+    @Override
+    public String conteudo() {
+        return "Nome: " + this.nome + " " +
+                "indereco: " + this.indereco + " " +
+                "id: " + this.id;
+    }
+
+    // GETTER E SETTER
     public String getNome() {
         return nome;
     }

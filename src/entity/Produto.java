@@ -1,13 +1,15 @@
 package entity;
 
 import entity.enums.TipoProduto;
+import entity.abstracts.Tabela;
 
-public class Produto {
+public class Produto extends Tabela {
     private int id;
     private String nome;
     private String descricao;
     private TipoProduto tipoProduto;
 
+    //constructor
     public Produto(int id, String nome, String descricao, TipoProduto tipoProduto) {
         this.id = id;
         this.nome = nome;
@@ -15,6 +17,15 @@ public class Produto {
         this.tipoProduto = tipoProduto;
     }
 
+    @Override
+    public String conteudo() {
+        return "id " + this.id +
+                "nome: " + this.nome +
+                "descriçao: " + this.descricao +
+                "tipo: " + this.tipoProduto.getDescrisao();
+    }
+
+    //getter end setter
     public int getId() {
         return id;
     }
