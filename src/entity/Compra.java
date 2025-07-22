@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Compra extends Tabela {
 
-    private int id;
+
     private final Date DATA;
     private Cliente cliente;
     private Produto produto;
@@ -27,12 +27,15 @@ public class Compra extends Tabela {
     }
 
     @Override
-    public String conteudo() {
+    public String toString() {
         return "Id: " + this.id +
                 "cliente: " + this.cliente.getNome() + " -> " + this.cliente.getId() + " -> " + this.cliente.getIndereco() +
                 "produto: " + this.produto.getNome() + " -> " + this.produto.getId() + " -> " + this.produto.getDescricao() + " -> " + this.produto.getTipoProduto() +
                 "descrisao: " + this.descricao;
     }
+
+    @Override
+
 
     //getter end setter
     public int getId() {

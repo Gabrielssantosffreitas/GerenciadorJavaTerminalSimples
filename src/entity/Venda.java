@@ -13,7 +13,7 @@ public class Venda extends Tabela {
     private String descricao;
     //Constructor
     public Venda(int id,Vendedor vendedor, Produto produto, String descricao) {
-        this.id = id;
+
         this.vendedor = vendedor;
         this.produto = produto;
         this.descricao = descricao;
@@ -24,13 +24,13 @@ public class Venda extends Tabela {
 
     }
 
-    public String conteudo() {
+    @Override
+    public String toString() {
         return "Id: " + this.id +
                 "cliente: " + this.vendedor.getNome() + " -> " + this.vendedor.getId() + " -> " +
                 "produto: " + this.produto.getNome() + " -> " + this.produto.getId() + " -> " + this.produto.getDescricao() + " -> " + this.produto.getTipoProduto() +
                 "descrisao: " + this.descricao;
     }
-
 
     //getter end setter
     public int getId() {

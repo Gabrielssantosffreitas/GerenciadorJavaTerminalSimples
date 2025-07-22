@@ -8,7 +8,8 @@ import java.util.List;
 public class VendaRepository extends RepositoryClass {
     @Override
     public void salvar(Object e) {
-        this.DATABASE.vendas.add((Venda) e);
+        Venda venda = (Venda) e;
+        this.DATABASE.vendas.add(venda);
     }
 
     @Override

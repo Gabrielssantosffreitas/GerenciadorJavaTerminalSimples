@@ -1,7 +1,6 @@
 package repository.interfaces;
 import entity.Cliente;
 import entity.abstracts.Tabela;
-
 import java.util.List;
 
 public interface Repository {

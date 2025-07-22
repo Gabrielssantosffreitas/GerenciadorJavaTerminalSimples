@@ -3,7 +3,7 @@ package entity;
 import entity.abstracts.Tabela;
 
 public class Vendedor extends Tabela {
-    private int id;
+
     private String nome;
 
     public Vendedor(int id, String nome) {
@@ -11,11 +11,15 @@ public class Vendedor extends Tabela {
         this.nome = nome;
 
     }
+
     @Override
-    public String conteudo() {
-        return "Id: " + this.id +
+    public String toString() {
+        return "Id: " + this.id +" "+
                 "nome: "+ this.nome;
     }
+
+    @Override
+
 
     public int getId() {
         return id;

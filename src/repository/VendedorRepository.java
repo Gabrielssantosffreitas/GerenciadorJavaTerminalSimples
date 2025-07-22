@@ -9,7 +9,7 @@ import java.util.List;
 public class VendedorRepository extends RepositoryClass {
     @Override
     public void salvar(Object e) {
-        this.DATABASE.vendedores.add((Produto) e);
+        this.DATABASE.vendedores.add((Vendedor) e);
     }
 
     @Override

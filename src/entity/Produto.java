@@ -4,7 +4,7 @@ import entity.enums.TipoProduto;
 import entity.abstracts.Tabela;
 
 public class Produto extends Tabela {
-    private int id;
+
     private String nome;
     private String descricao;
     private TipoProduto tipoProduto;
@@ -18,12 +18,14 @@ public class Produto extends Tabela {
     }
 
     @Override
-    public String conteudo() {
+    public String toString() {
         return "id " + this.id +
-                "nome: " + this.nome +
-                "descriçao: " + this.descricao +
+                "nome: " + this.nome +" "+
+                "descriçao: " + this.descricao +" "+
                 "tipo: " + this.tipoProduto.getDescrisao();
     }
+
+    @Override
 
     //getter end setter
     public int getId() {

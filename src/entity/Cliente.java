@@ -3,7 +3,7 @@ package entity;
 import entity.abstracts.Tabela;
 
 public class Cliente extends Tabela {
-    private int id;
+
     private String nome;
     private String indereco;
 
@@ -15,10 +15,12 @@ public class Cliente extends Tabela {
     }
 
     @Override
-    public String conteudo() {
-        return "Nome: " + this.nome + " " +
-                "indereco: " + this.indereco + " " +
-                "id: " + this.id;
+    public String toString() {
+
+            return "Nome: " + this.nome + " " +
+                    "indereco: " + this.indereco + " " +
+                    "id: " + this.id;
+
     }
 
     // GETTER E SETTER
